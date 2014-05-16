@@ -1,0 +1,21 @@
+<form name="input" action="staff_table" method="post">
+	姓名:
+	<input type="text" name="name" />
+
+	<select name="pos">
+		<option selected="selected"> --职位-- </option>
+    	<option value="0">教授</option>
+        <option value="1">副教授</option>
+        <option value="2">博士</option>
+        <option value="3">硕士</option>
+        <option value="4">本科生</option>
+	</select>
+  <input type="submit" value="确定"/>
+</form>
+
+<volist name="list" id="data">
+
+	<p>{$data.name}</p>
+    <p>{$data.pos}</p>
+	
+</volist>
