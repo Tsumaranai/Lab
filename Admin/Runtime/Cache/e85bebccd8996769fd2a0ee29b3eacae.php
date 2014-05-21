@@ -5,7 +5,7 @@
     <p>期刊:<input type="text" name="journal"/></p>
     <p>年份:<input type="text" name="age"/></p>
     <p>作者:</p>  
-<body>
+
 <table width="477" height="192" border="1">
 <tr>
 <td width="181" align="center" valign="middle">
@@ -19,12 +19,13 @@
 
 <td width="181" align="center" valign="middle">
 <select name="right_staff[]" size="7" multiple="multiple" id="right_staff" style="width:100px;" ondblclick="del_right('right_staff');"></select>
-<input type="submit" name="Submit4" value=" 提  交 " onclick="sel_all('right_staff')"/>
+
 </td>
 </td>
 
 </tr></table>
-</body>
+
 
 <p>摘要:<textarea name="abtract"></textarea></p>
+<input type="submit" name="Submit4" value=" 提  交 " onClick="sel_all('right_staff')"/>
 </form>
