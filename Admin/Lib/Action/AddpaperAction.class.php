@@ -47,9 +47,12 @@ class AddpaperAction extends Action {
 		foreach ($arr_sid as $v) {
 
 			$staff = $dbstaff->where("sid=" . $v)->select();
-			$staff['slid'] = $staff['slid'] . $lid . ";";
-			$dbstaff->where("sid=" . $v)->save($staff);
-
+			$srid = split(";", $staff['slid']);
+			//判断此软件是否已被录入
+			if (!in_array($$lid, $srid)) {
+				$staff['slid'] = $staff['slid'] . $lid . ";";
+				$dbstaff->where("sid=" . $v)->save($staff);
+			}
 		}
 	}
 
